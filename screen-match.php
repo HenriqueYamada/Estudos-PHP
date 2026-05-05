@@ -50,22 +50,52 @@ echo "O gênero do filme é: $genero \n"; */
 
 // Aprendendo a repetir ações - loops (for, while, do ... while)
 
-$cont = 1;
+/*$cont = 1;
 $somaNotas = 0;
 $qntdNotas = $argc - 2;
 
-/*for ($cont = 1; $cont <= $qntdNotas; $cont++) {
+for ($cont = 1; $cont <= $qntdNotas; $cont++) {
     $somaNotas += $argv[$cont];
-}*/
+}
 
-/*while ($argv[$cont] != 0) {
+while ($argv[$cont] != 0) {
     $somaNotas += $argv[$cont++];
 }*/
 
-do {
+/*do {
     $somaNotas += $argv[$cont++];
 } while ($argv[$cont] != 0);
 
 $notaFilme = $somaNotas / $qntdNotas;
 
-echo "Nota do filme: $notaFilme";
+echo "Nota do filme: $notaFilme";*/
+
+// Aprendendo a fazer litas - arrays 
+
+/*$notasParaOFilme = [10, 8, 9, 7.5, 5, 6.8];
+
+$filme = [
+    "nome" => "Thor: Ragnarok",
+    "ano" => 2021,
+    "nota" => 7.8,
+    "genero" => "super-herói",
+];
+
+echo $filme["ano"];*/
+
+$notas = [];
+$qntdNotas = $argc - 1;
+
+for ($cont = 1; $cont < $argc; $cont++) {
+    $notas[] = (float) $argv[$cont];
+    echo "$argv[$cont] \n";
+}
+
+$somaNotas = 0;
+
+foreach ($notas as $nota) {
+    $somaNotas += $nota;
+}
+
+$notaFilme = array_sum($notas) / $qntdNotas;
+echo $notaFilme;
