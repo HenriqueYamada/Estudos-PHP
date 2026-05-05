@@ -1,11 +1,10 @@
 <?php
-echo "Bem-vindo(a) ao Screen Match! \n";
+/* echo "Bem-vindo(a) ao Screen Match! \n";
 
 // Aprendendo a usar variáveis do tipo int, float e boolean
 
 $anoLancamento = $argv[1] ?? 2022; // Usando o operador de coalescência nula para definir um valor padrão
-$somaAvaliacoes = 9 + 6 + 8 + 7.5 + 5;
-$notaFilme = $somaAvaliacoes / 5;
+
 
 $planoPrime = true;
 $incluidoNoPlano = $planoPrime || $anoLancamento < 2020;
@@ -47,4 +46,26 @@ $genero = match ($nomeFilme) {
     default => "Gênero desconhecido",
 };
 
-echo "O gênero do filme é: $genero \n";
+echo "O gênero do filme é: $genero \n"; */
+
+// Aprendendo a repetir ações - loops (for, while, do ... while)
+
+$cont = 1;
+$somaNotas = 0;
+$qntdNotas = $argc - 2;
+
+/*for ($cont = 1; $cont <= $qntdNotas; $cont++) {
+    $somaNotas += $argv[$cont];
+}*/
+
+/*while ($argv[$cont] != 0) {
+    $somaNotas += $argv[$cont++];
+}*/
+
+do {
+    $somaNotas += $argv[$cont++];
+} while ($argv[$cont] != 0);
+
+$notaFilme = $somaNotas / $qntdNotas;
+
+echo "Nota do filme: $notaFilme";
