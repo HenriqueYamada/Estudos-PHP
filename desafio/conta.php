@@ -13,9 +13,7 @@ echo "4. Simular investimento \n";
 echo "5. Sair \n> ";
 $resp = (int) fgets(STDIN);
 
-while ($resp != 5) {
-    // menu
-
+do {
     switch ($resp) {
         case 1:
             echo "********************** \n";
@@ -62,6 +60,7 @@ while ($resp != 5) {
             $montante = $valor * (1 + $rendimento / 100) ** $anos;
             $juros = $montante - $valor;
 
+            echo "********************** \n";
             echo "Montante do investimento: R$" . number_format($montante, 2, ',', '.') . "\n";
             echo "Juros totais do investimento: R$ " . number_format($juros, 2, ',', '.') . " \n";
             break;
@@ -84,4 +83,4 @@ while ($resp != 5) {
     echo "5. Sair \n";
     echo "> ";
     $resp = (int) fgets(STDIN);
-}
+} while ($resp != 5);
