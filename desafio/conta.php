@@ -27,10 +27,14 @@ while ($resp != 5) {
             echo "Qual valor deseja sacar? \n> R$";
             $valor = (float) fgets(STDIN);
 
-            if ($saldo < $valor) {
-                echo "Saldo insuficiente. \n";
+            if ($valor > 0) {
+                if ($saldo < $valor) {
+                    echo "Saldo insuficiente. \n";
+                } else {
+                    $saldo -= $valor;
+                }
             } else {
-                $saldo -= $valor;
+                echo "Valor inválido \n";
             }
 
             break;
@@ -39,7 +43,12 @@ while ($resp != 5) {
             echo "Qual valor deseja depositar? \n> R$";
             $valor = (float) fgets(STDIN);
 
-            $saldo += $valor;
+            if ($valor > 0) {
+                $saldo += $valor;
+            } else {
+                echo "Valor inválido \n";
+            }
+
             break;
 
         case 4:
@@ -51,8 +60,10 @@ while ($resp != 5) {
             $anos = (int) fgets(STDIN);
 
             $montante = $valor * (1 + $rendimento / 100) ** $anos;
+            $juros = $montante - $valor;
 
             echo "Montante do investimento: R$" . number_format($montante, 2, ',', '.') . "\n";
+            echo "Juros totais do investimento: R$ " . number_format($juros, 2, ',', '.') . " \n";
             break;
 
         case 5:
