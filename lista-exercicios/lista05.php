@@ -57,3 +57,13 @@ $imc = $peso / $altura ** 2;
 $respImc = calcImc($imc);
 echo $respImc . "\n";
 
+// 3 - Crie uma função em PHP que converta graus celsius para Fahrenheit.
+
+function calcGraus($grausCelsius) {    
+    $grausFahr = $grausCelsius * 1.8 + 32;
+    echo "A temperatura de hoje é de $grausFahr °F";
+}
+
+echo "Quantos graus está hoje em °C? \n> ";
+$grausCelsius = (float) fgets(STDIN);
+calcGraus($grausCelsius);
