@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . "/functions.php";
+require __DIR__ . "/src/functions.php";
 
 echo "Bem-vindo(a) ao Screen Match! \n";
 
@@ -125,5 +125,14 @@ var_dump(substr($filme['nome'], 0, $posiDoisPont));*/
 // json
 //var_dump(json_decode('{"nome":"Thor: Ragnarok","ano":2021,"nota":7.8,"genero":"super-her\u00f3i"}', true));
 
-$filmeComoStringJson = json_encode($filme);
-file_put_contents(__DIR__ . '/filme.json', $filmeComoStringJson);
+//$filmeComoStringJson = json_encode($filme);
+//file_put_contents(__DIR__ . '/filme.json', $filmeComoStringJson);
+
+$filme = criaFilme(
+    nome: "Thor: Ragnarok", 
+    anoLancamento: 2021, 
+    nota: 7.8, 
+    genero: "super-herói"
+);
+
+var_dump($filme);
