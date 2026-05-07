@@ -1,4 +1,5 @@
 <?php
+require __DIR__ . '/src/Modelo/Filme.php';
 require __DIR__ . "/src/functions.php";
 
 echo "Bem-vindo(a) ao Screen Match! \n";
@@ -75,7 +76,7 @@ $filme = [
     "genero" => "super-herói",
 ];
 
-/*echo $filme["ano"];*/
+echo $filme->anoLancamento;
 
 /* $notas = [];
 $qntdNotas = $argc - 1;
