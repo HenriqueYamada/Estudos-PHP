@@ -11,3 +11,15 @@ while ($cont <= 100) {
 
     $cont++;
 }
+
+// 2 - Tabuada
+
+/*$cont = 1;
+echo "Digite um número para a tabuada: \n> ";
+$num = (int) fgets(STDIN);
+
+while ($cont <= 10) {
+    $resultado = $num * $cont;
+    echo $num . " x " . $cont . " = " . $resultado . "\n";
+    $cont++;
+}*/
