@@ -1,4 +1,6 @@
 <?php
+require __DIR__"functions.php";
+
 echo "Bem-vindo(a) ao Screen Match! \n";
 
 // Aprendendo a usar variáveis do tipo int, float e boolean
@@ -66,8 +68,6 @@ echo "Nota do filme: $notaFilme";*/
 
 // Aprendendo a fazer litas - arrays 
 
-/*$notasParaOFilme = [10, 8, 9, 7.5, 5, 6.8];
-
 $filme = [
     "nome" => "Thor: Ragnarok",
     "ano" => 2021,
@@ -75,7 +75,7 @@ $filme = [
     "genero" => "super-herói",
 ];
 
-echo $filme["ano"];*/
+/*echo $filme["ano"];*/
 
 /* $notas = [];
 $qntdNotas = $argc - 1;
@@ -98,20 +98,26 @@ exibeMensagemLancamento(1990);*/
 
 // Aprendendo funções
 
-function exibeMensagemLancamento (int $ano): void {
-    if ($ano > 2022) {
-        echo "Esse filme é um lançamento \n";  
-    } elseif ($ano > 2020 && $ano <= 2022) {
-        echo "Esse filme ainda é novo \n";  
-    } else {
-        echo "Esse filme não é um lançamento \n";  
-    }
-}
-
-function incluidoNoPlano (bool $planoPrime, int $anoLancamento): bool {
-    return $planoPrime || $anoLancamento < 2020;
-}
+/*
 
 $incluidoNoPlano = incluidoNoPlano($planoPrime, $anoLancamento);
 
-echo $incluidoNoPlano;
+echo $incluidoNoPlano;*/
+
+// Manipulando arrays
+
+$notas = [10, 8, 9, 7.5, 5, 6.8];
+
+var_dump($notas);
+sort($notas);
+var_dump($notas);
+echo min($notas);
+
+var_dump($filme['nome']);
+$posiDoisPont = strpos($filme['nome'], ':');
+
+var_dump($posiDoisPont);
+
+var_dump(substr($filme['nome'], 0, $posiDoisPont));
+
+//mbstring();
