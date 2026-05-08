@@ -46,11 +46,11 @@ class Filme {
 
     //para o genero
 
-    public function genero() { //getter - mostrar e passar o dado que é privado
-        $this->$genero;
+    public function genero(): string { //getter - mostrar e passar o dado que é privado
+        return $this->$genero;
     }
 
-    public function defineGenero(string $genero) { //setter - define uma novo valor 
+    public function defineGenero(string $genero): void { //setter - define uma novo valor 
         $this->genero = $genero;
     }
 }
