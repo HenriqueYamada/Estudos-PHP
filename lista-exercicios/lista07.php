@@ -18,4 +18,4 @@ echo $texto;
 
 $caminhoArquivoTeste = __DIR__ . '/lista07-arquivos/index.json';
 $texto = file_get_contents($caminhoArquivoTeste);
-var_dump(json_decode($texto), true);
+var_dump(json_decode($texto), true); 
